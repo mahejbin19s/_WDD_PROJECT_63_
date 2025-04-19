@@ -1,0 +1,186 @@
+<html>
+  <head>
+    <style>
+      nav {
+        background: #008000;
+        color: #fff;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav .logo {
+        font-size: 2.0rem;
+        font-weight: bold;
+        }
+        nav ul { 
+          list-style: none; 
+          display: flex; 
+          gap: 20px; 
+        }
+        nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: 0.2s;
+      }
+      nav ul li a:hover {
+         color: #90cdf4; 
+        }
+        *{
+                  padding: 0px;
+                  margin: 0px;
+                  box-sizing:border-box;
+                  font-family: Arial;
+              }
+        
+        
+        .quiz {
+        background:#fce38a;
+        border: 2px dashed #f38181;
+        padding: 20px;
+  
+        border-radius: 10px;
+      }
+  
+      .question {
+        margin-bottom: 20px;
+      }
+  
+      .question p {
+        font-weight: bold;
+      }
+  
+      .question button {
+        display: block;
+        margin: 5px 0;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        background: #ffb3c1;
+        color: #333;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+  
+      .question button:hover {
+        background: #ffc6d0;
+      }
+  
+      .correct {
+        background-color: #b2f7b2 !important;
+      }
+  
+      .incorrect {
+        background-color: red!important;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Kidspark </div>
+        <ul>
+            <li><a href="homeF%.html">Home</a></li>
+            <li><a href="subject.html">Subjects</a></li>
+            <li><a href="quiz.html">Quiz</a><li>
+            <li><a href="story.html">Story</a></li>
+        </ul>
+    </nav>
+    <section id="quiz" class="quiz">
+      <h2>Mini Quiz</h2>
+  
+      <div class="question">
+        <p>1. What is 2 + 2?</p>
+        <button onclick="checkAnswer(this, true)">A. 4</button>
+        <button onclick="checkAnswer(this, false)">B. 3</button>
+        <button onclick="checkAnswer(this, false)">C. 5</button>
+      </div>
+  
+      <div class="question">
+        <p>2. Which planet is known as the Red Planet?</p>
+        <button onclick="checkAnswer(this, false)">A. Earth</button>
+        <button onclick="checkAnswer(this, true)">B. Mars</button>
+        <button onclick="checkAnswer(this, false)">C. Jupiter</button>
+      </div>
+  
+      <div class="question">
+        <p>3. What is "20-9"?</p>
+        <button onclick="checkAnswer(this, false)">A. 10</button>
+        <button onclick="checkAnswer(this, true)">B.11</button>
+        <button onclick="checkAnswer(this, false)">C. 12</button>
+      </div>
+  <div class="question">
+        <p>4. What is the opposite of "Hot"?</p>
+        <button onclick="checkAnswer(this, false)">A. Warm</button>
+        <button onclick="checkAnswer(this, true)">B. Cold</button>
+        <button onclick="checkAnswer(this, false)">C. Cool</button>
+      </div>
+  
+  <div class="question">
+        <p>5.At what temperature does water start to boil?</p>
+        <button onclick="checkAnswer(this, false)">A. 150f</button>
+        <button onclick="checkAnswer(this, true)">B. 212f</button>
+        <button onclick="checkAnswer(this, false)">C. 360f</button>
+      </div>
+  
+  <div class="question">
+        <p>6. What do we put at the end of a question?</p>
+        <button onclick="checkAnswer(this, true)">A. ?</button>
+        <button onclick="checkAnswer(this, false)">B. !</button>
+        <button onclick="checkAnswer(this, false)">C. /</button>
+      </div>
+  
+      <div class="question">
+        <p>7. What is 10/2</p>
+        <button onclick="checkAnswer(this, false)">A. 4</button>
+        <button onclick="checkAnswer(this, false)">B. 3</button>
+        <button onclick="checkAnswer(this, true)">C. 5</button>
+      </div>
+  
+      <div class="question">
+        <p>8. Which of these animals lays eggs?</p>
+        <button onclick="checkAnswer(this, false)">A. Dog</button>
+        <button onclick="checkAnswer(this, true)">B. Chicken</button>
+        <button onclick="checkAnswer(this, false)">C. Sheep</button>
+      </div>
+  
+      <div class="question">
+        <p>9.A female horse is called a __?</p>
+        <button onclick="checkAnswer(this, true)">A. Mare</button>
+        <button onclick="checkAnswer(this, false)">B. Pony</button>
+        <button onclick="checkAnswer(this, false)">C. Foal</button>
+      </div>
+  
+      <div class="question">
+        <p>10. What is 5*5?</p>
+        <button onclick="checkAnswer(this, true)">A. 25</button>
+        <button onclick="checkAnswer(this, false)">B. 10</button>
+        <button onclick="checkAnswer(this, false)">C. 5</button>
+      </div>
+  
+    </section>
+    <script>
+      function checkAnswer(button, isCorrect) {
+        const parent = button.parentElement;
+        const buttons = parent.querySelectorAll("button");
+  
+        buttons.forEach(btn => {
+          btn.disabled = true;
+          btn.classList.remove('correct', 'incorrect');
+        });
+  
+        if (isCorrect) {
+          button.classList.add("correct");
+        } else {
+          button.classList.add("incorrect");
+        }
+      }
+    </script>
+  
+    </header>
+    
+  
+    </body>
+    </html>
